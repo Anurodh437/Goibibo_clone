@@ -1,0 +1,25 @@
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #366db0;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .lin {
+    padding-top: 8px;
+    width: 10rem;
+    text-align: center;
+    border-bottom: 1px dashed #366db0;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+  }
+  .lin1 {
+    background: #fff;
+    padding: 0 10px;
+  }
+  .svgs {
+    fill: #366db0;
+  }
+  

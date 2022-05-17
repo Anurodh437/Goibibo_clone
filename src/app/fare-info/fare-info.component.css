@@ -1,0 +1,18 @@
+table {
+    display: table;
+  }
+  table tr {
+    display: table-cell;
+  }
+  table tr td {
+    display: block;
+  }
+  .abc{
+      border-bottom: 1px solid #DEE2E6;
+      font-size: 14px;
+  }
+  
+  .abc1{
+      text-align: right;
+  }
+  

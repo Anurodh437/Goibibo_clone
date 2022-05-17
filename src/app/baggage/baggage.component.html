@@ -1,0 +1,31 @@
+<div class="p-2">
+    <div class="d-flex flex-row align-items-center">
+      <img width="30" src="{{ flightParent[0].flightLogo }}" alt="flightLogo" />
+      <div class="fs ms-2 fw-bold">{{ flightParent[0].departLoc }}</div>
+      <div>-</div>
+      <div class="fs fw-bold">{{ flightParent[0].arrivalLoc }}</div>
+      <div class="fs ms-1">({{ flightParent[0].flightNum }})</div>
+    </div>
+  </div>
+  <div class="mt-2 fs">
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <td class="bg-light">Baggage Type</td>
+          <td>Check-In</td>
+          <td>Cabin</td>
+        </tr>
+        <tr>
+          <td class="bg-light">Adult</td>
+          <td>15 Kgs(1 piece only)</td>
+          <td>7 Kgs(1 piece only)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="text-secondary">
+      * * Only 1 check-in baggage allowed per passenger. You can buy excess
+      baggage as allowed by the airline, however you might have to pay additional
+      charges at airport.
+    </p>
+  </div>
+  

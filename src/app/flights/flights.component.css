@@ -1,0 +1,50 @@
+.gaps {
+    margin-left: 3px;
+  }
+  .tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .sort {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .mleft {
+    margin-left: 13px;
+  }
+  
+  .butn {
+    background-color: #ff6d38;
+    border-radius: 6px;
+    border: none;
+  }
+  .btn1 {
+    float: right;
+    right: 0;
+    border: none;
+    background-color: transparent;
+  }
+  
+  .card-btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #647a97;
+    border-radius: 50px;
+  }
+  
+  .active {
+    background-color: blue;
+    color: white;
+  }
+  

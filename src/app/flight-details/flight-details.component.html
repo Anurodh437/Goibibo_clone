@@ -1,0 +1,51 @@
+<div class="card p-4">
+    <div class="d-flex flex-row justify-content-between">
+      <div class="d-flex flex-column">
+        <img width="23" src="{{ flightParent[0].flightLogo }}" alt="flightLogo" />
+        <small class="pt-2 text-secondary">{{
+          flightParent[0].flightName
+        }}</small>
+        <small class="text-secondary">{{ flightParent[0].flightNum }}</small>
+      </div>
+      <div class="d-flex flex-column">
+        <div class="pe-5 text-secondary fw-bold">
+          {{ flightParent[0].departLoc }}&nbsp;
+          <span class="text-secondary fw-normal">{{
+            flightParent[0].departure
+          }}</span>
+        </div>
+        <small class="text-secondary">{{ flightParent[0].airportSName }}</small>
+      </div>
+  
+      <div class="d-flex flex-column align-items-center text-secondary">
+        <div class="d-flex align-items-center">
+          <div class="dot"></div>
+          <div class="lin">
+            <span class="lin1 fw-bolder">{{ flightParent[0].duration }}</span>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 32 32"
+            width="1.5rem"
+            height="1.5rem"
+            class="svgs Flight__FlightIcon-sc-1w228os-0 iMMsxL"
+          >
+            <path
+              d="M31.95 16.262c-.012 0-.012 0 0 0-.337.762-2.238 1.3-2.238 1.3l-8.137-.012-8.863 12.925-2.088-.15 4.063-10.875-.225-1.95-9.588-.025L.499 22.05l-.5.063 1.438-5.663-.475-.375-.113-.088.125-.1.475-.363L.024 9.849l.5.063 4.338 4.6h9.6l.225-1.95-4.025-10.887 2.088-.15 8.825 12.963 8.137.012s2.713.762 2.238 1.763z"
+            ></path>
+          </svg>
+        </div>
+        <small>Flight Duration</small>
+      </div>
+      <div class="d-flex flex-column">
+        <div class="pe-5 text-secondary fw-bold">
+          {{ flightParent[0].arrivalLoc }}&nbsp;
+          <span class="text-secondary fw-normal">{{
+            flightParent[0].arrival
+          }}</span>
+        </div>
+        <small>{{ flightParent[0].airportEName }}</small>
+      </div>
+    </div>
+  </div>
+  

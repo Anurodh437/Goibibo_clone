@@ -1,0 +1,65 @@
+<div class="modal-header">
+  <h4 class="modal-title w-100 text-center">Flight details</h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  ></button>
+</div>
+<div class="modal-body">
+  <img
+    src="{{ flightDetails.flightLogo }}"
+    width="100"
+    height="100"
+    class="img-thumbnail mx-auto d-block mb-3"
+  />
+  <div class="row">
+    <div class="col-4">
+      <h6>Flight name :</h6>
+    </div>
+    <div class="col float-start">{{ flightDetails.flightName }}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>From :</h6></div>
+    <div class="col">{{ flightDetails.departLoc }}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>To :</h6></div>
+    <div class="col">{{ flightDetails.arrivalLoc }}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>Departure time :</h6></div>
+    <div class="col">{{ flightDetails.departure }}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>Arrival time :</h6></div>
+    <div class="col">{{ flightDetails.arrival }}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>Total Duration :</h6></div>
+    <div class="col">{{ flightDetails.duration }}</div>
+  </div>
+  <div class="row">
+    <div class="col-4"><h6>Total price :</h6></div>
+    <div class="col fw-bolder text-success">
+      {{ flightDetails.price | currency: "INR":"symbol":"4.0" }}
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="activeModal.close('Close click')"
+    >
+      Close
+    </button>
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="confirm(); activeModal.close('Ok click')"
+    >
+      Proceed to pay
+    </button>
+  </div>
+</div>
