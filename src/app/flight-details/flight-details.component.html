@@ -1,27 +1,27 @@
 <div class="card p-4">
     <div class="d-flex flex-row justify-content-between">
       <div class="d-flex flex-column">
-        <img width="23" src="{{ flightParent[0].flightLogo }}" alt="flightLogo" />
+        <img width="23" src="{{ flightParent.flightLogo }}" alt="flightLogo" />
         <small class="pt-2 text-secondary">{{
-          flightParent[0].flightName
+          flightParent.flightName
         }}</small>
-        <small class="text-secondary">{{ flightParent[0].flightNum }}</small>
+        <small class="text-secondary">{{ flightParent.flightNum }}</small>
       </div>
       <div class="d-flex flex-column">
         <div class="pe-5 text-secondary fw-bold">
-          {{ flightParent[0].departLoc }}&nbsp;
+          {{ flightParent.departLoc }}&nbsp;
           <span class="text-secondary fw-normal">{{
-            flightParent[0].departure
+            flightParent.departure
           }}</span>
         </div>
-        <small class="text-secondary">{{ flightParent[0].airportSName }}</small>
+        <small class="text-secondary">{{ flightParent.airportSName }}</small>
       </div>
   
       <div class="d-flex flex-column align-items-center text-secondary">
         <div class="d-flex align-items-center">
           <div class="dot"></div>
           <div class="lin">
-            <span class="lin1 fw-bolder">{{ flightParent[0].duration }}</span>
+            <span class="lin1 fw-bolder">{{ flightParent.duration }}</span>
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,12 +39,12 @@
       </div>
       <div class="d-flex flex-column">
         <div class="pe-5 text-secondary fw-bold">
-          {{ flightParent[0].arrivalLoc }}&nbsp;
+          {{ flightParent.arrivalLoc }}&nbsp;
           <span class="text-secondary fw-normal">{{
-            flightParent[0].arrival
+            flightParent.arrival
           }}</span>
         </div>
-        <small>{{ flightParent[0].airportEName }}</small>
+        <small>{{ flightParent.airportEName }}</small>
       </div>
     </div>
   </div>

@@ -1,0 +1,17 @@
+.card-btn {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #647a97;
+  border-radius: 50px;
+}
+
+.active {
+  background-color: blue;
+  color: white;
+}

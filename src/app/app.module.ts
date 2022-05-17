@@ -14,6 +14,8 @@ import { BackendService } from './backend.service';
 import { MDBBootstrapModulesPro, MDBModalRef } from 'ng-uikit-pro-standard';
 import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
 import { MdbModalRef, MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { TopMenuComponent } from './top-menu/top-menu.component';
+import { DropdownsComponent } from './dropdowns/dropdowns.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { MdbModalRef, MdbModalModule } from 'mdb-angular-ui-kit/modal';
     LoginComponent,
     FlightsComponent,
     ModalFormComponent,
+    TopMenuComponent,
+    DropdownsComponent,
   ],
   imports: [
     BrowserModule,

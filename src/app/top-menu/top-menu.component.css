@@ -1,0 +1,21 @@
+.sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gaps {
+  margin-left: 3px;
+}
+
+.active {
+  background-color: blue;
+  color: white;
+}
+
+.cursor {
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}

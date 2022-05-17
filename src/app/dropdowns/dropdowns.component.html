@@ -1,0 +1,49 @@
+<div class="mt-4 mb-2" [class.d-none]="shows">
+  <div class="card rounded-pill bg-light mb-2">
+    <div class="d-flex flex-row justify-content-between">
+      <button
+        (click)="onClick('1')"
+        [class.active]="check === '1'"
+        class="card-btn"
+      >
+        FLIGHT INFORMATION
+      </button>
+      <button
+        (click)="onClick('2')"
+        [class.active]="check === '2'"
+        class="card-btn"
+      >
+        FARE DETAILS
+      </button>
+      <button
+        (click)="onClick('3')"
+        [class.active]="check === '3'"
+        class="card-btn"
+      >
+        BAGGAGE RULES
+      </button>
+      <button
+        (click)="onClick('4')"
+        [class.active]="check === '4'"
+        class="card-btn"
+      >
+        CANCELLATION RULES
+      </button>
+    </div>
+  </div>
+  <div>
+    <app-flight-details
+      [flightParent]="flightDetails"
+      *ngIf="check === '1'"
+    ></app-flight-details>
+    <app-fare-info
+      [flightParent]="flightDetails"
+      *ngIf="check === '2'"
+    ></app-fare-info>
+    <app-baggage [flightParent]="flightDetails" *ngIf="check === '3'"></app-baggage>
+    <app-cancellation
+      [flightParent]="flightDetails"
+      *ngIf="check === '4'"
+    ></app-cancellation>
+  </div>
+</div>

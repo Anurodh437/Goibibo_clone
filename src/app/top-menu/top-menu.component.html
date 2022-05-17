@@ -1,0 +1,37 @@
+<div class="h4 text-center pt-2 pb-4">
+  Book Your Flights Here At discounted Price
+</div>
+<div class="mb-1">Sort By</div>
+<div>
+  <!-- Card for the upper heading section displaying duration ,arrrival etc. -->
+  <div class="card sort py-1 fs-8">
+    <div
+      (click)="callingSortingFun(1)"
+      [class.active]="num === 1"
+      class="cursor"
+    >
+      DEPARTURE ⇅
+    </div>
+    <div
+      (click)="callingSortingFun(2)"
+      [class.active]="num === 2"
+      class="cursor"
+    >
+      DURATION ⇅
+    </div>
+    <div
+      (click)="callingSortingFun(3)"
+      [class.active]="num === 3"
+      class="cursor"
+    >
+      ARRIVAL ⇅
+    </div>
+    <div
+      (click)="callingSortingFun(4)"
+      [class.active]="num === 4"
+      class="cursor"
+    >
+      PRICE ⇅
+    </div>
+  </div>
+</div>
