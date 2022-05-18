@@ -1,5 +1,8 @@
 <!-- card to show the flight details using ngform -->
-<div class="card mt-3 mb-3 pt-3 ps-3 pe-3" *ngFor="let flight of flights">
+<div
+  class="card mt-3 mb-3 pt-3 ps-3 pe-3"
+  *ngFor="let flight of flights; index as i; first as isfirst "
+>
   <div class="d-flex">
     <img width="20" class="" src="{{ flight.flightLogo }}" alt="flight Logo" />
     <small class="mleft">{{ flight.flightName }}</small>
@@ -63,7 +66,7 @@
   <div class="mt-1">
     <small class="text-secondary fs-10">Partially Refundable</small>
     <button
-      (click)="toggleDiv()"
+      (click)="hiddenItems[i]=!hiddenItems[i]"
       class="btn1 d-flex justify-content-end align-items-center"
     >
       <small class="text-primary me-1 fw-bolder"> Flight Details</small>
@@ -75,5 +78,5 @@
     </button>
   </div>
   <!-- dropdown section of fight details page which will be displayed when toggle button pressed -->
-  <app-dropdowns [flightDetails]="flight" [shows]="showDiv"></app-dropdowns>
+  <app-dropdowns [flightDetails]="flight" [shows]="hiddenItems[i]"></app-dropdowns>
 </div>

@@ -10,6 +10,7 @@ import { ModalFormComponent } from '../modal-form/modal-form.component';
   styleUrls: ['./flights.component.css'],
 })
 export class FlightsComponent implements OnInit {
+  hiddenItems:any = {};
   public flights: any = [];
 
   modalRef: MDBModalRef | null = null;
@@ -22,10 +23,6 @@ export class FlightsComponent implements OnInit {
     this.flights = this._flightDetails.getFlightDetails();
   }
   showDiv: boolean = true;
-
-  toggleDiv() {
-    this.showDiv = !this.showDiv;
-  }
 
   openModal(flight: any) {
     const modalRef = this.modalService.open(ModalFormComponent);

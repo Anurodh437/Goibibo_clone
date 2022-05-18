@@ -1,5 +1,5 @@
 <div class="modal-header">
-  <h4 class="modal-title w-100 text-center">Flight details</h4>
+  <h4 class="modal-title w-100 text-center">you're almost done</h4>
   <button
     type="button"
     class="btn-close"
@@ -8,40 +8,43 @@
   ></button>
 </div>
 <div class="modal-body">
-  <img
-    src="{{ flightDetails.flightLogo }}"
-    width="100"
-    height="100"
-    class="img-thumbnail mx-auto d-block mb-3"
-  />
-  <div class="row">
-    <div class="col-4">
-      <h6>Flight name :</h6>
+  <div class="d-flex justify-content-center align-items-start">
+    <div class="">
+      <img
+        src="{{ flightDetails.flightLogo }}"
+        width="100"
+        height="100"
+        class="img-thumbnail mx-auto d-block mb-3"
+      />
     </div>
-    <div class="col float-start">{{ flightDetails.flightName }}</div>
+    <div class="ms-5">
+      <h6 class="fs-2 fw-bold">Flight name :</h6>
+      <div class="fs-4 text-info bg-light">{{ flightDetails.flightName }}</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4"><h6 class="fs-6 fw-bold text-muted">From :</h6></div>
+    <div class="col fs-7 text-dark">{{ flightDetails.departLoc }}</div>
   </div>
   <div class="row">
-    <div class="col-4"><h6>From :</h6></div>
-    <div class="col">{{ flightDetails.departLoc }}</div>
+    <div class="col-4"><h6 class="fs-6 fw-bold text-muted">To :</h6></div>
+    <div class="col fs-7 text-dark">{{ flightDetails.arrivalLoc }}</div>
   </div>
   <div class="row">
-    <div class="col-4"><h6>To :</h6></div>
-    <div class="col">{{ flightDetails.arrivalLoc }}</div>
+    <div class="col-4"><h6 class="fs-6 fw-bold text-muted">Departure time :</h6></div>
+    <div class="col fs-7 text-dark">{{ flightDetails.departure }}</div>
   </div>
   <div class="row">
-    <div class="col-4"><h6>Departure time :</h6></div>
-    <div class="col">{{ flightDetails.departure }}</div>
+    <div class="col-4"><h6 class="fs-6 fw-bold text-muted">Arrival time :</h6></div>
+    <div class="col fs-7 text-dark">{{ flightDetails.arrival }}</div>
   </div>
   <div class="row">
-    <div class="col-4"><h6>Arrival time :</h6></div>
-    <div class="col">{{ flightDetails.arrival }}</div>
+    <div class="col-4"><h6 class="fs-6 fw-bold text-muted">Total Duration :</h6></div>
+    <div class="col fs-7 text-dark">{{ flightDetails.duration }}</div>
   </div>
   <div class="row">
-    <div class="col-4"><h6>Total Duration :</h6></div>
-    <div class="col">{{ flightDetails.duration }}</div>
-  </div>
-  <div class="row">
-    <div class="col-4"><h6>Total price :</h6></div>
+    <div class="col-4"><h6 class="fs-6 fw-bold text-muted">Total price :</h6></div>
     <div class="col fw-bolder text-success">
       {{ flightDetails.price | currency: "INR":"symbol":"4.0" }}
     </div>
