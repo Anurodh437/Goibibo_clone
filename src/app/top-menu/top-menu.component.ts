@@ -9,7 +9,7 @@ import { FlightsComponent } from '../flights/flights.component';
 export class TopMenuComponent implements OnInit {
   @ViewChild(FlightsComponent, { static: true }) child!: FlightsComponent;
   public num: any;
-  callingSortingFun(type: any) {
+  callingSortingFun(type: any):any {
     this.num = type;
     this.child.sortDetails(type);
   }

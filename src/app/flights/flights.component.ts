@@ -10,7 +10,7 @@ import { ModalFormComponent } from '../modal-form/modal-form.component';
   styleUrls: ['./flights.component.css'],
 })
 export class FlightsComponent implements OnInit {
-  public flights: any;
+  public flights: any = [];
 
   modalRef: MDBModalRef | null = null;
   constructor(
@@ -48,27 +48,23 @@ export class FlightsComponent implements OnInit {
     } else if (value === 2) {
       this.asc
         ? this.flights.sort((a: any, b: any) =>
-            a.TimeTaken > b.TimeTaken ? 1 : -1
+            a.duration > b.duration ? 1 : -1
           )
         : this.flights.sort((a: any, b: any) =>
-            a.TimeTaken > b.TimeTaken ? -1 : 1
+            a.duration > b.duration ? -1 : 1
           );
     } else if (value === 3) {
       this.asc
         ? this.flights.sort((a: any, b: any) =>
-            a.ArrivalTime > b.ArrivalTime ? 1 : -1
+            a.arrival > b.arrival ? 1 : -1
           )
         : this.flights.sort((a: any, b: any) =>
-            a.ArrivalTime > b.ArrivalTime ? -1 : 1
+            a.arrival > b.arrival ? -1 : 1
           );
     } else if (value === 4) {
       this.asc
-        ? this.flights.sort((a: any, b: any) =>
-            a.TicketPrice > b.TicketPrice ? 1 : -1
-          )
-        : this.flights.sort((a: any, b: any) =>
-            a.TicketPrice > b.TicketPrice ? -1 : 1
-          );
+        ? this.flights.sort((a: any, b: any) => (a.price > b.price ? 1 : -1))
+        : this.flights.sort((a: any, b: any) => (a.price > b.price ? -1 : 1));
     }
   }
 }

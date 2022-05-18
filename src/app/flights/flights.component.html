@@ -1,90 +1,79 @@
-<div class="container">
-  <app-top-menu></app-top-menu>
-  <!-- card to show the flight details using ngform -->
-  <div
-    class="card mt-3 mb-3 pt-3 ps-3 pe-3"
-    *ngFor="let flight of flights"
-  >
-    <div class="d-flex">
-      <img
-        width="20"
-        class=""
-        src="{{ flight.flightLogo }}"
-        alt="flight Logo"
-      />
-      <small class="mleft">{{ flight.flightName }}</small>
+<!-- card to show the flight details using ngform -->
+<div class="card mt-3 mb-3 pt-3 ps-3 pe-3" *ngFor="let flight of flights">
+  <div class="d-flex">
+    <img width="20" class="" src="{{ flight.flightLogo }}" alt="flight Logo" />
+    <small class="mleft">{{ flight.flightName }}</small>
+  </div>
+  <div class="d-flex flex-row justify-content-between mt-2">
+    <!-- div for departure time -->
+    <div class="d-flex flex-column">
+      <small>
+        {{ flight.departLoc }}&nbsp;&nbsp;<small>{{
+          flight.departFullLoc
+        }}</small>
+      </small>
+      <div>{{ flight.departure }}</div>
     </div>
-    <div class="d-flex flex-row justify-content-between mt-2">
-      <!-- div for departure time -->
-      <div class="d-flex flex-column">
-        <small>
-          {{ flight.departLoc }}&nbsp;&nbsp;<small>{{
-            flight.departFullLoc
-          }}</small>
-        </small>
-        <div>{{ flight.departure }}</div>
-      </div>
-      <!-- div for duration -->
-      <div>{{ flight.duration }}</div>
-      <!-- section for arrival time -->
-      <div class="d-flex flex-column">
-        <small>
-          {{ flight.arrivalLoc }}&nbsp;&nbsp;<small>{{
-            flight.departFullLoc
-          }}</small>
-        </small>
-        <div>{{ flight.arrival }}</div>
-      </div>
-      <!-- price section -->
+    <!-- div for duration -->
+    <div>{{ flight.duration }}</div>
+    <!-- section for arrival time -->
+    <div class="d-flex flex-column">
+      <small>
+        {{ flight.arrivalLoc }}&nbsp;&nbsp;<small>{{
+          flight.departFullLoc
+        }}</small>
+      </small>
+      <div>{{ flight.arrival }}</div>
+    </div>
+    <!-- price section -->
+    <div>
       <div>
-        <div>
-          <span
-            ><img
-              width="20"
-              height="18"
-              src="../../assets/icons8-rupee-24.png"
-              alt="rupee" /></span
-          >{{ flight.price }}
-        </div>
-        <!-- emi portion -->
-        <small class="d-flex align-items-center">
-          <small> No Cost EMI from</small>
-          <img
-            width="15"
-            height="16"
+        <span
+          ><img
+            width="20"
+            height="18"
             src="../../assets/icons8-rupee-24.png"
-            alt="rupee"
-          />
-          <span>{{ flight.emiPrice }}</span>
-        </small>
+            alt="rupee" /></span
+        >{{ flight.price }}
       </div>
-      <!-- button section -->
-      <div>
-        <button
-          (click)="openModal(flight)"
-          type="button"
-          class="butn px-5 py-1 text-white fw-bold"
-        >
-          BOOK
-        </button>
-      </div>
-    </div>
-    <!-- bottom section of details button and a text -->
-    <div class="mt-1">
-      <small class="text-secondary fs-10">Partially Refundable</small>
-      <button
-        (click)="toggleDiv()"
-        class="btn1 d-flex justify-content-end align-items-center"
-      >
-        <small class="text-primary me-1 fw-bolder"> Flight Details</small>
+      <!-- emi portion -->
+      <small class="d-flex align-items-center">
+        <small> No Cost EMI from</small>
         <img
-          width="17"
-          src="../../assets/icons8-chevron-down-30.png"
-          alt="down arrow"
+          width="15"
+          height="16"
+          src="../../assets/icons8-rupee-24.png"
+          alt="rupee"
         />
+        <span>{{ flight.emiPrice }}</span>
+      </small>
+    </div>
+    <!-- button section -->
+    <div>
+      <button
+        (click)="openModal(flight)"
+        type="button"
+        class="butn px-5 py-1 text-white fw-bold"
+      >
+        BOOK
       </button>
     </div>
-    <!-- dropdown section of fight details page which will be displayed when toggle button pressed -->
-    <app-dropdowns [flightDetails]="flight" [shows]="showDiv"></app-dropdowns>
   </div>
+  <!-- bottom section of details button and a text -->
+  <div class="mt-1">
+    <small class="text-secondary fs-10">Partially Refundable</small>
+    <button
+      (click)="toggleDiv()"
+      class="btn1 d-flex justify-content-end align-items-center"
+    >
+      <small class="text-primary me-1 fw-bolder"> Flight Details</small>
+      <img
+        width="17"
+        src="../../assets/icons8-chevron-down-30.png"
+        alt="down arrow"
+      />
+    </button>
+  </div>
+  <!-- dropdown section of fight details page which will be displayed when toggle button pressed -->
+  <app-dropdowns [flightDetails]="flight" [shows]="showDiv"></app-dropdowns>
 </div>
